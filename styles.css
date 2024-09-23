@@ -1,0 +1,11 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.teste{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    color: red;
+}
