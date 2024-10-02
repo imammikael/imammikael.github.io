@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/icone.png" type="image/png">
+    <title>Jogos | Gaming Store</title>
+    <link rel="stylesheet" href="hardware-placa-de-video.css">
+</head>
+<body>
+    
+    <div class="cookie-popup" id="cookiePopup">
+        Este site utiliza cookies para melhorar a sua experiência de navegação. 
+        Ao continuar, você concorda com o uso de cookies. 
+        <button onclick="acceptCookies()">Aceitar Cookies</button>
+        <button onclick="refuseCookies()">Recusar Cookies</button>
+    </div>
+
+    <style>
+        .cookie-popup {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            display: none; /* Inicialmente oculto */
+        }
+        .cookie-popup button {
+            background-color: #f39c12;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .cookie-popup button:hover {
+            background-color: #e67e22;
+        }
+    </style>
+
+    <script>
+        // Função para mostrar o pop-up
+        function showCookiePopup() {
+            document.getElementById('cookiePopup').style.display = 'block';
+        }
+
+        // Funções para os botões
+        function acceptCookies() {
+            document.getElementById('cookiePopup').style.display = 'none';
+        }
+
+        function refuseCookies() {
+            document.getElementById('cookiePopup').style.display = 'none';
+        }
+
+        // Mostrar o pop-up após 1 segundo
+        setTimeout(showCookiePopup, 1000);
+    </script>
+
+    <img src="./img/botao-subir.png" onclick="scrollToTop()" id="scrollTopBtn" alt="Scroll to Top" />
+        
+    <script>
+        // Mostrar/esconder o botão ao rolar a página
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            const scrollTopBtn = document.getElementById("scrollTopBtn");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollTopBtn.style.display = "block";
+            } else {
+                scrollTopBtn.style.display = "none";
+            }
+        }
+
+        // Rolagem suave até o topo
+        function scrollToTop() {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    </script>
+
+    <!-- Barra de Navegação-começo -->
+    <nav class="navbar">
+        <div class="container">
+            <!-- Logotipo e Nome da Loja (à esquerda) -->
+            <div class="navbar-left">
+                <a href="index.html">
+                    <img src="img/logotipo da barra de navegação.png" alt="Logotipo-GameBoy" class="logotipo-barra-navegação-imagem">
+                </a>
+                <a href="index.html">
+                    <img src="./img/logotipo-gamingstore.png" alt="Logotipo-GamingStore" class="logotipo-barra-navegação-texto">
+                </a>
+            </div>
+            
+            <!-- Links de Navegação -->
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+    
+            <li class="dropdown-Contato">
+                <a href="#">Contato</a>
+                <ul class="dropdown-Contato-menu">
+                    <li>
+                        <a href="https://www.whatsapp.com" target="_blank">
+                            <img src="./img/whatsapp-icone-contato.png" alt="WhatsApp" class="whatsapp-icone-contato">
+                            WhatsApp
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com" target="_blank">
+                            <img src="./img/instagram-icone-contato.png" alt="Instagram" class="instagram-icone-contato">
+                            Instagram
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com" target="_blank">
+                            <img src="./img/facebook-icone-contato.png" alt="Facebook" class="facebook-icone-contato">
+                            Facebook
+                        </a>                       
+                    </li>
+                </ul>
+            </li>
+    
+    <li class="dropdown-Produto">
+        <a href="#">Produtos</a>
+        <ul class="dropdown-Produto-menu">
+            <li><a href="perifericos.html">Periféricos</a></li>
+            <li><a href="hardware.html">Hardware</a></li>
+            <li><a href="jogos.html">Jogos</a></li>
+        </ul>
+    </li>
+</ul>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const contatoLink = document.querySelector('.dropdown-Contato > a');
+        const contatoMenu = document.querySelector('.dropdown-Contato-menu');
+        const produtosLink = document.querySelector('.dropdown-Produto > a');
+        const produtosMenu = document.querySelector('.dropdown-Produto-menu');
+        
+        contatoLink.addEventListener('click', function(event) {
+            event.preventDefault(); // Evita o comportamento padrão do link
+            contatoMenu.classList.toggle('show'); // Alterna a classe 'show'
+            produtosMenu.classList.remove('show'); // Esconde o menu de produtos
+        });
+        
+        produtosLink.addEventListener('click', function(event) {
+            event.preventDefault(); // Evita o comportamento padrão do link
+            produtosMenu.classList.toggle('show'); // Alterna a classe 'show'
+            contatoMenu.classList.remove('show'); // Esconde o menu de contatos
+        });
+    });
+</script>
+
+            <li class="search">
+                <div class="search-container">
+                    <img src="./img/lupa-pesquisa.png" alt="Lupa de Pesquisa" class="search-icon" onclick="toggleSearch()">
+                    <input type="text" id="searchInput" placeholder="Faça sua pesquisa..." onkeydown="checkEnter(event)">
+                </div>
+            </li>
+            
+            <style>
+                /* Oculta o campo inicialmente */
+                #searchInput {
+                    width: 0;
+                    opacity: 0;
+                    padding: 5px;
+                    transition: width 0.4s ease, opacity 0.4s ease;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                }
+            
+                /* Define o tamanho quando visível */
+                #searchInput.visible {
+                    width: 150px;
+                    opacity: 1;
+                }
+            
+                /* Remove o ponto preto (foco) na imagem da lupa */
+                .search-icon {
+                    outline: none;
+                    cursor: pointer;
+                }
+            </style>
+            
+            <script>
+                function toggleSearch() {
+                    const searchInput = document.getElementById("searchInput");
+                    
+                    // Alterna entre adicionar e remover a classe 'visible'
+                    if (searchInput.classList.contains('visible')) {
+                        searchInput.classList.remove('visible');
+                    } else {
+                        searchInput.classList.add('visible');
+                        searchInput.focus(); // Dá foco ao campo para poder escrever
+                    }
+                }
+            </script>                          
+        </div>
+    </nav>
+    <!-- Barra de Navegação-final -->
+
+    <!--Botão da Barra Lateral-->
+    <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">☰</button>
+    <!--Estilo do Botão de Abrir a Barra Lateral-->
+    <style>
+        .w3-button {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            color: white;
+            background-color: transparent;
+            margin-top: 83px;
+            margin-left: 1306px;
+        }
+        .w3-sidebar {
+            height: 100%; /* Full-height */
+            width: 0; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            top: 0; /* Stay at the top */
+            left: 0; /* Stay at the left */
+            background-color: #5f5e5e; /* Gray background */
+            overflow-x: hidden; /* Disable horizontal scroll */
+            transition: 0.5s; /* Transition effect for opening/closing */
+            padding-top: 60px; /* Place content 60px from the top */
+        }
+        .w3-bar-item {
+            display: block;
+            padding: 10px 95px;
+            color: rgb(0, 0, 0); /* Gold text */
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+        .w3-bar-item:hover {
+            background-color: rgba(255, 255, 255, 0.2); /* Lighten on hover */
+            color: gold;
+        }
+    </style>
+
+    <!-- Sidebar -->
+    <div class="w3-sidebar w3-bar-block" id="mySidebar">
+        <button onclick="w3_close()" class="w3-bar-item" class="w3-large">Fechar &times;</button>
+        <a href="hardware-placa-de-video.html" class="w3-bar-item">Placa de Vídeo</a>
+    </div>
+
+    <script>
+        function w3_open() {
+            document.getElementById("mySidebar").style.width = "250px"; // Set width to open
+            document.getElementById("mySidebar").style.display = "block"; // Show the sidebar
+        }
+        
+        function w3_close() {
+            document.getElementById("mySidebar").style.width = "0"; // Set width to close
+            setTimeout(function() {
+                document.getElementById("mySidebar").style.display = "none"; // Hide the sidebar after transition
+            }, 500); // Delay to allow transition to complete
+        }
+    </script>
+
+    <p class="titulo-produtos-de-placas-de-video">
+        Produtos de Placas de Vídeo
+    </p>
+
+    <style>
+        .titulo-produtos-de-placas-de-video {
+            font-size: 45px;
+            display: flex;
+            justify-content: center;
+            color: #FFD700;
+            text-decoration: underline;
+            margin-top: 12px;
+        }
+    </style>
+
+    <!--Cards dos Jogos-->
+    <div class="card-container">
+        <div class="product-card">
+            <img src="./img-jogos/jogo-1.png" alt="Mouse Gamer" class="product-image">
+            <h2 class="product-name">Marvel's Spider-Man: Miles Morales Edição Padrão - PlayStation 5</h2>
+            <a href="pag-jogo-1.html">
+                <button class="buy-button">Comprar</button>
+            </a>
+            <span class="product-price">R$ 179,99</span>
+        </div>
+
+        <div class="product-card">
+            <img src="./img-jogos/jogo-2.png" alt="Teclado Mecânico" class="product-image">
+            <h2 class="product-name">Resident Evil 4 - PlayStation 5</h2>
+            <a href="pag-jogo-2.html">
+                <button class="buy-button">Comprar</button>
+            </a>
+            <span class="product-price">R$ 199,99</span>
+        </div>
+
+        <div class="product-card">
+            <img src="./img-jogos/jogo-3.png" alt="Cadeira Gamer" class="product-image">
+            <h2 class="product-name">Horizon Forbidden West Edição Padrão - Playstation 5</h2>
+            <a href="pag-jogo-3.html">
+                <button class="buy-button">Comprar</button>
+            </a>
+            <span class="product-price">R$ 299,90</span>
+        </div>
+
+        <div class="product-card">
+            <img src="./img-jogos/jogo-4.png" alt="Cadeira Gamer" class="product-image">
+            <h2 class="product-name">Elden Ring - PlayStation 5</h2>
+            <a href="pag-jogo-4.html">
+                <button class="buy-button">Comprar</button>
+            </a>
+            <span class="product-price">R$ 249,90</span>
+        </div>
+
+        <div class="product-card">
+            <img src="./img-jogos/jogo-5.png" alt="Cadeira Gamer" class="product-image">
+            <h2 class="product-name">God of War Ragnarök - Edição Standard - PlayStation 5</h2>
+            <a href="pag-jogo-5.html">
+                <button class="buy-button">Comprar</button>
+            </a>
+            <span class="product-price">R$ 269,10</span>
+        </div>
+    </div>
+
+    <style>
+    .card-container {
+        display: flex;
+        justify-content: center; /* Centraliza os cards horizontalmente */
+        align-items: flex-start; /* Mantém os cards alinhados ao topo */
+        margin-top: 125px; /* Espaço do topo */
+    }
+
+    .product-card {
+        margin: 0 10px;
+        background-color: #fff;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        width: 15%; /* Cards mais finos */
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-image {
+        width: 150px; /* Largura fixa de 150px */
+        height: 150px; /* Altura fixa de 150px */
+        object-fit: cover; /* Mantém a proporção e cobre o espaço disponível */
+        border-radius: 8px; /* Bordas arredondadas */
+        margin-bottom: 10px; /* Espaçamento abaixo da imagem */
+    }
+
+    .product-name {
+        font-size: 16px; /* Texto um pouco menor */
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 8px;
+    }
+
+    .product-description {
+        font-size: 12px;
+        color: #777;
+        margin-bottom: 10px;
+    }
+
+    .buy-button {
+        display: inline-block;
+        margin-bottom: 10px; /* Espaço entre o botão e o preço */
+        padding: 10px 20px;
+        background-color: #27ae60; /* Cor verde */
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .buy-button:hover {
+        background-color: #219150; /* Cor mais escura ao passar o mouse */
+    }
+
+    .product-price {
+        font-size: 18px;
+        font-weight: bold;
+        color: #27ae60;
+    }
+
+    @media screen and (max-width: 768px) {
+        .card-container {
+            flex-direction: column; /* Em telas menores, os cards ficam empilhados */
+            align-items: center;
+        }
+
+        .product-card {
+            width: 80%;
+            margin-bottom: 20px;
+        }
+    }
+    </style>
+
+</body>
+</html>

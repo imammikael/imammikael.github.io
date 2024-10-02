@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/icone.png" type="image/png">
+    <title>Teclado Mecânico Gamer Machenike K500-B61 RGB | Gaming Store</title>
+    <link rel="stylesheet" href="anuncio-teclado.css">
+</head>
+<body>
+
+    <img src="./img/botao-subir.png" onclick="scrollToTop()" id="scrollTopBtn" alt="Scroll to Top" />
+        
+    <script>
+        // Mostrar/esconder o botão ao rolar a página
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            const scrollTopBtn = document.getElementById("scrollTopBtn");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollTopBtn.style.display = "block";
+            } else {
+                scrollTopBtn.style.display = "none";
+            }
+        }
+
+        // Rolagem suave até o topo
+        function scrollToTop() {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    </script>
+
+    <!-- Barra de Navegação - começo -->
+    <nav class="navbar">
+        <div class="container">
+            <!-- Logotipo e Nome da Loja (à esquerda) -->
+            <div class="navbar-left">
+                <a href="index.html">
+                    <img src="img/logotipo da barra de navegação.png" alt="Logotipo-GameBoy" class="logotipo-barra-navegação-imagem">
+                </a>
+                <a href="index.html">
+                    <img src="./img/logotipo-gamingstore.png" alt="Logotipo-GamingStore" class="logotipo-barra-navegação-texto">
+                </a>
+            </div>
+            
+            <!-- Links de Navegação -->
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                
+                <li class="dropdown-Contato">
+                    <a href="#">Contato</a>
+                    <ul class="dropdown-Contato-menu">
+                        <li>
+                            <a href="#">
+                                <img src="./img/whatsapp-icone-contato.png" alt="WhatsApp" class="whatsapp-icone-contato">
+                                WhatsApp
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./img/instagram-icone-contato.png" alt="Instagram" class="instagram-icone-contato">
+                                Instagram
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./img/facebook-icone-contato.png" alt="Facebook" class="facebook-icone-contato">
+                                Facebook
+                            </a>
+                        </li>
+
+                        <!--Código Java Script para o "Contato":começo-->
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function() {
+                                const contatoLink = document.querySelector('.dropdown-Contato > a');
+                                const dropdownMenu = document.querySelector('.dropdown-Contato-menu');
+                        
+                                contatoLink.addEventListener('click', function(event) {
+                                    event.preventDefault(); // Evita o comportamento padrão do link
+                                    dropdownMenu.classList.toggle('show'); // Alterna a classe 'show'
+                                });
+                            });
+                        </script>
+                        <!--Código do Java Script para o "Contato:":final-->
+                    </ul>
+                </li>
+                
+                <li class="dropdown-Produto">
+                    <a href="#">Produtos</a>
+                    <ul class="dropdown-Produto-menu">
+                        <li><a href="#">Periféricos</a></li>
+                        <li><a href="#">Hardware</a></li>
+                        <li><a href="#">Jogos</a></li>
+
+                        <!--Código Java Script para o "Produto":começo-->
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function() {
+                                const produtosLink = document.querySelector('.dropdown-Produto > a');
+                                const dropdownMenu = document.querySelector('.dropdown-Produto-menu');
+                        
+                                produtosLink.addEventListener('click', function(event) {
+                                    event.preventDefault(); // Evita o comportamento padrão do link
+                                    dropdownMenu.classList.toggle('show'); // Alterna a classe 'show'
+                                });
+                            });
+                        </script>
+                        <!--Código do Java Script para o "Produto":final-->
+                    </ul>
+                </li>
+
+            </ul>
+
+        </div>
+    </nav>
+    <!-- Barra de Navegação - final -->
+
+    <header>
+        <div class="product-header">
+            <img src="./img/teclado-venda-anuncio.png" alt="Teclado Mecânico Gamer" class="product-image">
+            <div class="product-info">
+                <h1 class="highlight-background">Teclado Mecânico Gamer Machenike K500-B61 RGB</h1>
+                <p class="highlight-background">O Teclado Mecânico Gamer Machenike K500-B61 RGB é um teclado projetado especialmente para gamers que buscam desempenho, conforto e estilo.</p>
+                <span class="price">R$ 249,99</span>
+                <button class="buy-button highlight-background">Comprar Agora</button>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Seção de Avaliações -->
+    <section class="reviews">
+        <h2 class="titulo-avalições-do-produto">Avalie o Produto</h2>
+        <div class="star-rating" id="star-rating">
+            <span class="star" data-value="1">★</span>
+            <span class="star" data-value="2">★</span>
+            <span class="star" data-value="3">★</span>
+            <span class="star" data-value="4">★</span>
+            <span class="star" data-value="5">★</span>
+        </div>
+        <p id="rating-text">0 de 5 estrelas</p>
+    </section>
+    
+    <!-- Seção de Descrições -->
+    <section class="product-descriptions">
+        <h2 class="titulo-mais-descrições-sobre-o-produto">Mais Descrições sobre o Produto</h2>
+        <p class="p-1">O Teclado Mecânico Gamer Machenike K500-B61 RGB possui switches mecânicos de alta qualidade, proporcionando uma resposta tátil e rápida. Com iluminação RGB personalizável, você pode escolher entre várias cores e efeitos para se adequar ao seu estilo. O design ergonômico e as teclas anti-ghosting garantem conforto e precisão durante longas sessões de jogo.</p>
+        <p class="p-2">Além disso, o teclado conta com um layout compacto, ideal para quem tem pouco espaço na mesa, e um cabo USB resistente que garante durabilidade. É compatível com diversos sistemas operacionais, tornando-o uma excelente escolha para gamers e profissionais.</p>
+    </section>
+    
+    <style>
+        .titulo-avalições-do-produto {
+            color: #ffffff; /* Substitua #333 pela cor desejada */
+            font-family: 'Arial', sans-serif; /* Define a fonte do título */
+            font-size: 24px; /* Tamanho da fonte reduzido */
+            background-color: rgb(65, 64, 64);
+            padding: 10px; /* Espaçamento interno reduzido */
+            text-align: center; /* Centraliza o texto */
+            border-radius: 8px; /* Arredonda os cantos reduzido */
+            box-shadow: 0 2px 10px rgba(255, 255, 255, 0.2); /* Sombra ao redor do título reduzida */
+            margin: 10px 0; /* Margem acima e abaixo do título reduzida */
+        }
+
+        .reviews, .product-descriptions {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    
+        .star-rating {
+            font-size: 24px; /* Tamanho das estrelas */
+            color: lightgray; /* Cor padrão das estrelas */
+            cursor: pointer; /* Muda o cursor para indicar que é clicável */
+        }
+    
+        .star-rating .star.selected {
+            color: gold; /* Cor das estrelas selecionadas */
+        }
+
+        #rating-text {
+            color: #ffffff; /* Substitua #ffffff pela cor desejada */
+        }
+
+        .titulo-mais-descrições-sobre-o-produto {
+            color: #ffffff; /* Substitua #333 pela cor desejada */
+            font-family: 'Arial', sans-serif; /* Define a fonte do título */
+            font-size: 24px; /* Tamanho da fonte reduzido */
+            background-color: rgb(65, 64, 64);
+            padding: 10px; /* Espaçamento interno reduzido */
+            text-align: center; /* Centraliza o texto */
+            border-radius: 8px; /* Arredonda os cantos reduzido */
+            box-shadow: 0 2px 10px rgba(255, 255, 255, 0.2); /* Sombra ao redor do título reduzida */
+            margin: 10px 0; /* Margem acima e abaixo do título reduzida */
+        }
+
+        .p-1 {
+            color: white;
+        }
+
+        .p-2 {
+            color: white;
+        }
+    </style>
+    
+    <script>
+        const stars = document.querySelectorAll('.star');
+        const ratingText = document.getElementById('rating-text');
+    
+        stars.forEach(star => {
+            star.addEventListener('click', () => {
+                const rating = star.getAttribute('data-value');
+                stars.forEach(s => {
+                    s.classList.remove('selected'); // Remove a classe 'selected' de todas as estrelas
+                });
+                for (let i = 0; i < rating; i++) {
+                    stars[i].classList.add('selected'); // Adiciona a classe 'selected' às estrelas clicadas
+                }
+                ratingText.textContent = `${rating} de 5 estrelas`; // Atualiza o texto da avaliação
+            });
+        });
+    </script>
+    
+    <footer>
+        <div class="payment-methods">
+            <h3>Formas de Pagamento</h3>
+            <img src="./img/img-formas-de-pagamento/visa-icone-footer.png" alt="Visa">
+            <img src="./img/img-formas-de-pagamento/mastercard-icone-footer.png" alt="Mastercard">
+            <img src="./img/img-formas-de-pagamento/paypal-icone-footer.png" alt="Paypal">
+            <img src="./img/img-formas-de-pagamento/americanexpress-icone-footer.png" alt="American Express">
+            <img src="./img/img-formas-de-pagamento/pix-icone-footer.png" alt="Pix">
+        </div>
+        <div class="social-media">
+            <h3>Siga-nos</h3>
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+        </div>
+        <div class="contact-info">
+            <h3>Contato</h3>
+            <p>Email: gamingstore@gmail.com</p>
+            <p>Telefone: (51) 1234-5678</p>
+        </div>
+        <p>&copy; 2024 Nossa Loja. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
